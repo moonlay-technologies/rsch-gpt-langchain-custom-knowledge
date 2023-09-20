@@ -1,0 +1,52 @@
+row_nums,username,email,role,client,working_date,work_duration
+1,Adia Mahardika,adia.mahardika@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/1/2023,9 Hours 25 Minutes
+2,Andrian Cedric,andrian.cedric@moonlay.com,UI/UX,Moonlay,2/1/2023,8 Hours 0 Minutes
+3,Ardy Maulana,ardy.maulana@moonlay.com,Software Developer,IDX,2/1/2023,12 Hours 4 Minutes
+4,Ardy Maulana,ardy.maulana@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/1/2023,2 Hours 5 Minutes
+5,Astrid Nadya Anggraini,astrid.anggraini@moonlay.com,Data Engineer,PT. Depoguna Bangunan,2/1/2023,9 Hours 0 Minutes
+6,Bondan Chahya Nugraha,bondan.nugraha@moonlay.com,Scrum Master,IDX,2/1/2023,9 Hours 0 Minutes
+7,Christopher Kenneth Palit,christopher.kenneth@moonlay.com,Digital Marketing,Moonlay,2/1/2023,8 Hours 0 Minutes
+8,Dhifa Irawan,dhifa.irawan@moonlay.com,Engineering Advisor,IDX,2/1/2023,9 Hours 7 Minutes
+9,Doni Indrawan,doni.indrawan@moonlay.com,Technical Writer,PT. Depoguna Bangunan,2/1/2023,9 Hours 24 Minutes
+10,Ezra Artasasta Hutapea,ezra.hutapea@moonlay.com,Software Developer,IDX,2/1/2023,8 Hours 53 Minutes
+11,Falih Nurhadi,falih.nurhadi@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/1/2023,14 Hours 26 Minutes
+12,Ibrahim,ibrahim@moonlay.com,Software Developer,IDX,2/1/2023,10 Hours 0 Minutes
+13,Ivena Chindy Claudia,ivena.claudia@moonlay.com,Product Owner,IDX,2/1/2023,8 Hours 57 Minutes
+14,Jimmy Faizal,jimmy.faizal@moonlay.com,Engineering Advisor,IDX,2/1/2023,7 Hours 54 Minutes
+15,Julio Lemena,julio.lemena@moonlay.com,Engineering Advisor,IDX,2/1/2023,8 Hours 0 Minutes
+16,Krisna Dwi Setyaadi,krisna.setyaadi@moonlay.com,Software Developer,IDX,2/1/2023,7 Hours 54 Minutes
+17,Mesakh Dwi Putra,mesakh.putra@moonlay.com,Product Owner Advisor,PT. Depoguna Bangunan,2/1/2023,9 Hours 0 Minutes
+18,Mochamad Yud Sobari,yudi.sobari@moonlay.com,Software Developer,Moonlay,2/1/2023,8 Hours 55 Minutes
+19,Mohamad Handy Nugraha,handy.nugraha@moonlay.com,Software Developer,IDX,2/1/2023,8 Hours 0 Minutes
+20,Muhammad Iqbal,muhammad.iqbal@moonlay.com,Technical Writer,PT. Depoguna Bangunan,2/1/2023,9 Hours 10 Minutes
+21,Mukti Julianto Leondi,mukti.leondi@moonlay.com,IT Support,Moonlay,2/1/2023,8 Hours 30 Minutes
+22,Murni J. Telaumbanua,murni.telaumbanua@moonlay.com,Data Analyst,PT. Depoguna Bangunan,2/1/2023,8 Hours 30 Minutes
+23,Natalia Sentosa,natalia.sentosa@moonlay.com,Business Analyst,PT. Depoguna Bangunan,2/1/2023,13 Hours 50 Minutes
+24,Patresia Ratu Wetti Sitanggang,patresia.sitanggang@moonlay.com,Product Owner,PT. Depoguna Bangunan,2/1/2023,16 Hours 2 Minutes
+25,Putra Fajar F,putra.fajar@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/1/2023,8 Hours 16 Minutes
+26,Reza Alpadizami,reza.alpadizami@moonlay.com,Software Developer,Moonlay,2/1/2023,8 Hours 23 Minutes
+27,Sally Harnecia,sallyharneciass@moonlay.com,Project Manager,PT. Depoguna Bangunan,2/1/2023,8 Hours 0 Minutes
+28,Sandy Agustinus Suherman,sandy.suherman@moonlay.com,Software Developer,IDX,2/1/2023,13 Hours 0 Minutes
+29,Tesya Aristawidya,tesya.aristawidya@moonlay.com,Business Analyst,PT. Depoguna Bangunan,2/1/2023,11 Hours 59 Minutes
+30,Vinny Kristina Sihombing,vinny.kristina@moonlay.com,Data Analyst,PT. Depoguna Bangunan,2/1/2023,8 Hours 5 Minutes
+31,Yesayas Fransiscus,yesayas.fransiscus@moonlay.com,QA Engineer,PT. Depoguna Bangunan,2/1/2023,9 Hours 3 Minutes
+32,Adia Mahardika,adia.mahardika@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/2/2023,9 Hours 25 Minutes
+33,Andrian Cedric,andrian.cedric@moonlay.com,UI/UX,Moonlay,2/2/2023,8 Hours 0 Minutes
+34,Ardy Maulana,ardy.maulana@moonlay.com,Software Developer,IDX,2/2/2023,9 Hours 54 Minutes
+35,Astrid Nadya Anggraini,astrid.anggraini@moonlay.com,Data Engineer,PT. Depoguna Bangunan,2/2/2023,9 Hours 0 Minutes
+36,Bondan Chahya Nugraha,bondan.nugraha@moonlay.com,Scrum Master,IDX,2/2/2023,9 Hours 0 Minutes
+37,Christopher Kenneth Palit,christopher.kenneth@moonlay.com,Digital Marketing,Moonlay,2/2/2023,8 Hours 0 Minutes
+38,Dhifa Irawan,dhifa.irawan@moonlay.com,Engineering Advisor,IDX,2/2/2023,9 Hours 3 Minutes
+39,Doni Indrawan,doni.indrawan@moonlay.com,Technical Writer,PT. Depoguna Bangunan,2/2/2023,9 Hours 41 Minutes
+40,Ezra Artasasta Hutapea,ezra.hutapea@moonlay.com,Software Developer,IDX,2/2/2023,8 Hours 0 Minutes
+41,Falih Nurhadi,falih.nurhadi@moonlay.com,Software Developer,PT. Depoguna Bangunan,2/2/2023,17 Hours 7 Minutes
+42,Ibrahim,ibrahim@moonlay.com,Software Developer,IDX,2/2/2023,9 Hours 45 Minutes
+43,Ivena Chindy Claudia,ivena.claudia@moonlay.com,Product Owner,IDX,2/2/2023,9 Hours 3 Minutes
+44,Jimmy Faizal,jimmy.faizal@moonlay.com,Engineering Advisor,IDX,2/2/2023,7 Hours 54 Minutes
+45,Julio Lemena,julio.lemena@moonlay.com,Engineering Advisor,IDX,2/2/2023,8 Hours 0 Minutes
+46,Krisna Dwi Setyaadi,krisna.setyaadi@moonlay.com,Software Developer,IDX,2/2/2023,8 Hours 15 Minutes
+47,Mesakh Dwi Putra,mesakh.putra@moonlay.com,Product Owner Advisor,PT. Depoguna Bangunan,2/2/2023,9 Hours 0 Minutes
+48,Mochamad Yud Sobari,yudi.sobari@moonlay.com,Software Developer,Moonlay,2/2/2023,8 Hours 55 Minutes
+49,Mohamad Handy Nugraha,handy.nugraha@moonlay.com,Software Developer,IDX,2/2/2023,8 Hours 0 Minutes
+50,Muhammad Iqbal,muhammad.iqbal@moonlay.com,Technical Writer,PT. Depoguna Bangunan,2/2/2023,8 Hours 0 Minutes
+51,Mukti Julianto Leondi,mukti.leondi@moonlay.com,IT Support,Moonlay,2/2/2023,8 Hours 30 Minutes
