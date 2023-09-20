@@ -1,5 +1,6 @@
 import os
 import sys
+from dotenv import load_dotenv
 
 import openai
 import pinecone 
@@ -14,10 +15,13 @@ from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from langchain.embeddings import OpenAIEmbeddings
 
-os.environ["OPENAI_API_KEY"] = "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"
+load_dotenv('envi.env')
+
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+API_PINECONE = os.getenv('API_PINECONE')
 
 pinecone.init(
-    api_key='4b1e03c5-4927-4a1f-8b55-13f985a8c167',
+    api_key=API_PINECONE,
     environment='gcp-starter'
     )
 index_name = "openai-index"
@@ -42,7 +46,7 @@ def split_docs(documents,chunk_size=2000,chunk_overlap=0):
 
 docs = split_docs(documents)
 # Embeddings
-embeddings=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY,model_name="text-davinci-002")
+embeddings=OpenAIEmbeddings(model_name="text-davinci-002")
 # Load data to pinecone vector
 index = Pinecone.from_texts([t.page_content for t in docs], embeddings, index_name=index_name)
 
