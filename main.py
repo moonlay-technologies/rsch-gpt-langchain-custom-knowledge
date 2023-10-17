@@ -12,6 +12,9 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.schema.document import Document
 from langchain.prompts import ChatPromptTemplate
 
+# Initialize Flask app
+app = Flask(__name__)
+
 load_dotenv('envi.env')
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -29,10 +32,11 @@ query_chain = create_sql_query_chain(ChatOpenAI(temperature=0), db)
 
 # Import Knowledge base of information in directory
 # Load information from directory
-directory = 'data'
-
-loader = DirectoryLoader(directory)
-loads = loader.load()
+# directory = 'data'
+# loader = DirectoryLoader(directory)
+# loads = loader.load()
+directory = 'data/text_profile.txt'
+loader = TextLoader(directory)
 # Create index
 index_creator = VectorstoreIndexCreator()
 index = index_creator.from_loaders([loader])
@@ -40,26 +44,32 @@ index = index_creator.from_loaders([loader])
 retriever = index.vectorstore.as_retriever()
 
 # System generated prompting
-system_message = """ Use the following information from below to answer any questions
+system_message = """ Use the following information from below to answer any questions:
 
-Source 1: a SQL database that contains data about employee informations
+Source 1: Employee Information (SQL Database)
+- This source contains two tables:
+    - 'employee' table: Contains information about all employees, including their ID, name, email, group, roles, work location, join date, and resign date.
+    - 'employee_activity' table: Contains records of employee activities, including sprint date, sprint year, sprint string, employee ID, employee name, client, project, tags, task, description, start date, end date, start time, end time, duration, and duration decimal.
+
+You can use this data to answer questions related to employees, their activities, and project details.
 <source1>
 {source1}
 </source1>
 
-Source 2: a text file containing company informaiton
+Source 2: information about Moonlay Technologies.
 <source2>
 {source2}
 </source2>
 """
 prompt = ChatPromptTemplate.from_messages([("system", system_message), ("human", "{question}")])
+chat_history = []
 
-# Combine chain
-full_chain = {
-    "source1": {"question": lambda x: x["question"]} | query_chain | db.run,
-    "source2": (lambda x: x['question']) | retriever,
-    "question": lambda x: x['question'],
-} | prompt | ChatOpenAI()
+# # Combine chain
+# full_chain = {
+#     "source1": {"question": lambda x: x["question"]} | query_chain | db.run,
+#     "source2": (lambda x: x['question']) | retriever,
+#     "question": lambda x: x['question'],
+# } | prompt | ChatOpenAI()
 
 # Chats!
 # response = full_chain.invoke({"question":"what is astrid email?"})
@@ -71,12 +81,28 @@ def ask_question():
         data = request.get_json()
         question = data['question']
 
-        response = full_chain.invoke({"question": question})
-        return jsonify({"response": response})
+        # conversation_history.append({"question": question})
+        # chat_input = conversation_history.copy()
+
+        response = full_chain.invoke({"question": question, "chat_history": chat_history})
+
+        # Convert the AIMessage object to a dictionary
+        response_dict = {
+            "response": response.content  
+        }
+        return jsonify(response_dict)
 
     except Exception as e:
         return jsonify({"error": str(e)})
 
 if __name__ == '__main__':
+
+    # Create the full chat chain
+    full_chain = {
+        "source1": {"question": lambda x: x["question"]} | query_chain | db.run,
+        "source2": (lambda x: x['question']) | retriever,
+        "question": lambda x: x['question'],
+    } | prompt | ChatOpenAI()
+
     # Run the Flask app
     app.run(debug=True)
