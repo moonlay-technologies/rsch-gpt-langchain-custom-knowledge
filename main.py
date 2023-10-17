@@ -1,13 +1,13 @@
-from flask import Flask, request, jsonify
 import os
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify
 
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import create_csv_agent
 
 from langchain.utilities import SQLDatabase
 from langchain.chains import create_sql_query_chain
-from langchain.document_loaders import DirectoryLoader
+from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.schema.document import Document
 from langchain.prompts import ChatPromptTemplate
@@ -23,7 +23,7 @@ os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 # Create chat agent 
 # Create connection to sqlite database
-dburl = "sqlite:////...\...\sqlite\moonlay_info.db"
+dburl = "sqlite:///./sqlite/moonlay_info.db"
 
 # Connect to SqlLite Server
 db = SQLDatabase.from_uri(dburl)
@@ -35,7 +35,7 @@ query_chain = create_sql_query_chain(ChatOpenAI(temperature=0), db)
 # directory = 'data'
 # loader = DirectoryLoader(directory)
 # loads = loader.load()
-directory = 'data/text_profile.txt'
+directory = './data/text_profile.txt'
 loader = TextLoader(directory)
 # Create index
 index_creator = VectorstoreIndexCreator()
@@ -105,4 +105,4 @@ if __name__ == '__main__':
     } | prompt | ChatOpenAI()
 
     # Run the Flask app
-    app.run(debug=True)
+    app.run()
